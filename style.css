@@ -1,0 +1,165 @@
+/* reset */
+html,body,h1,h2,h3,h4,h5,h6,div,dl,dt,dd,ul,ol,li,p,blockquote,pre,hr,figure,table,caption,th,td,form,fieldset,legend,input,button,textarea,menu{margin:0;padding:0;}
+header,footer,section,article,aside,nav,hgroup,address,figure,figcaption,menu,details{display:block;}
+table{border-collapse:collapse;border-spacing:0;}
+caption,th{text-align:left;font-weight:normal;}
+html,body,fieldset,img,iframe,abbr{border:0;}
+i,cite,em,var,address,dfn{font-style:normal;}
+[hidefocus],summary{outline:0;}
+li{list-style:none;}
+h1,h2,h3,h4,h5,h6,small{font-size:100%;}
+sup,sub{font-size:83%;}
+pre,code,kbd,samp{font-family:inherit;}
+q:before,q:after{content:none;}
+textarea{overflow:auto;resize:none;}
+label,summary{cursor:default;}
+a,button{cursor:pointer;}
+h1,h2,h3,h4,h5,h6,em,strong,b{font-weight:bold;}
+del,ins,u,s,a,a:hover{text-decoration:none;}
+body,textarea,input,button,select,keygen,legend{font:12px/1.14 arial,\5b8b\4f53;color:#333;outline:0;}
+body{background:#fff;}
+a,a:hover{color:#333;}
+
+/* clearfix */
+.clearfix:after {
+    content: "."; /* Older browser do not support empty content */
+    visibility: hidden;
+    display: block;
+    height: 0;
+    clear: both;
+}
+.clearfix {zoom: 1;} /* 针对 IE 不支持 :after */
+
+
+.container {
+    width: 75%;
+    margin: 0 auto;
+}
+
+/* 通知条 */
+.m-tip {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #f2f3f4;
+    font: 13px/36px sans-serif;
+}
+.m-tip .left {
+    display: inline-block;
+    float: left;
+}
+.m-tip .right {
+    display: inline-block;
+    float: right;
+    cursor: pointer;
+}
+.m-tip a {
+    text-decoration: none;
+    color: #21a557;
+}
+
+/* 头部 */
+.m-header {
+    margin-top: 36px;
+    padding: 30px 0;
+    width: 100%;
+    height: 22px;
+    font: 20px/22px sans-serif;
+}
+.m-header .line {
+    display: inline-block;
+    float: right;
+}
+.m-header img {
+    vertical-align: middle;
+}
+.m-header .follow {
+    font: 13px "Sim Sun";
+    padding: 6px 10px;
+    border-radius: 2px;
+    margin: 0 14px;
+    cursor: pointer;
+    color: #ffffff;
+    background: #21a557;
+    vertical-align: middle;
+}
+.m-header .link {
+    margin: 0 28px;
+    font: 16px "Sim Sun";
+}
+.m-header .link:hover {
+    color: #39a030;
+}
+
+
+/* 轮播图 */
+.m-banner {
+    position: relative;
+    width: 100%;
+    height: 460px;
+    overflow: hidden;
+}
+.m-banner ol, .m-banner li {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 20;
+}
+.m-banner li {
+    opacity: 0;
+    -webkit-transition: 0.5s ease-out;
+    -moz-transition: 0.5s ease-out;
+    -ms-transition: 0.5s ease-out;
+    transition: 0.5s ease-out;
+    -webkit-transition-property: opacity, left, top;
+    -moz-transition-property: opacity, left, top;
+    -ms-transition-property: opacity, left, top;
+    transition-property: opacity, left, top;
+}
+.m-banner li.z-crt {
+    z-index: 21;
+    opacity: 1;
+}
+.m-banner-x li{left:-100%;}
+.m-banner-x li.z-crt{left:0;}
+.m-banner-x li.z-crt ~ li{left:100%;}
+/* 多点式幻灯指示控制器-默认底部居中 */
+.u-pointer{position:absolute;bottom:10px;left:0;right:0;z-index:50;text-align:center;line-height:0;}
+.u-pointer i{display:inline-block;width:10px;height:10px;margin:0 0 0 5px;border-radius:50%;box-shadow:inset 0 1px 0 rgba(0,0,0,0.5);cursor:pointer;background:#ccc;}
+.u-pointer i:first-child{margin-left:0;}
+.u-pointer i:hover{background:#999;}
+.u-pointer i.z-crt{background:#40a1d9;}
+
+/* 介绍部分 */
+.m-intro .container {
+    margin-top: 60px;
+}
+.m-intro .cell {
+    float: left;
+    width: 33.33%;
+}
+.m-intro .cell .icon {
+    float: left;
+}
+.m-intro .cell .text {
+    width: 60%;
+    font-size: 14px;
+    margin-left: 100px;
+}
+.m-intro .cell .text p {
+    margin-bottom: 25px;
+}
+.m-intro .cell .text a {
+    display: inline-block;
+    margin-top: 15px;
+}
+.m-intro .cell .title {
+    font-size: 22px;
+}
+.m-intro a {
+    text-decoration: none;
+    color: #21a557;
+}
